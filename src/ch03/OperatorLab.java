@@ -20,12 +20,17 @@ class OperatorLab {
         int a = 10;
         float b = 10.0f;
 
-        // 1번 문제
+        // 1번 문제 true
         System.out.println(a == b);
-
-        // 2번 문제
+        //자동형변환규칙에 따라 범위가 더 작은 int타입 변수 a가 범위가 더 큰 float타입으로 변환
+        
+        // 2번 문제 false
         double d = 0.1;
         float f = 0.1f;
         System.out.println(d == f);
+        //자동형변환이 되지만, 애초에 저장된값이 다름, 부동소수점 오차
+        //double이 float보다 훨씬 더 정밀하게 0.1에 가까운 값을 표현할 뿐, 둘 다 완벽한 0.1은 아닙니다.
+        //비교 시점에는 float인 f가 double로 자동 형변환되지만, 애초에 저장된 근사값이 다르기 때문에
+        // == 비교 결과는false가 됩니다.
     }
 }
