@@ -15,7 +15,9 @@ package ch03;
     }
 }*/
 
-class OperatorLab {
+import java.util.Scanner;
+
+/*class OperatorLab {
     public static void main(String[] args) {
         int a = 10;
         float b = 10.0f;
@@ -32,5 +34,19 @@ class OperatorLab {
         //double이 float보다 훨씬 더 정밀하게 0.1에 가까운 값을 표현할 뿐, 둘 다 완벽한 0.1은 아닙니다.
         //비교 시점에는 float인 f가 double로 자동 형변환되지만, 애초에 저장된 근사값이 다르기 때문에
         // == 비교 결과는false가 됩니다.
+    }
+}*/
+class OperatorLab {
+    //Quiz: 정수 x가 10보다 크고 20보다 작을 때 true를 반환하는 조건식을 논리 연산자 &&를 사용해서 만들어 보세요.
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int x = scanner.nextInt();
+
+        if (x>10 && x<20) {
+            System.out.printf("%b", x>10 && x<20);
+        } else {
+            System.out.printf("%b", x>10 && x<20);
+        }
     }
 }
