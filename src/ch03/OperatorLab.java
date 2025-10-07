@@ -36,7 +36,8 @@ import java.util.Scanner;
         // == 비교 결과는false가 됩니다.
     }
 }*/
-class OperatorLab {
+
+/*class OperatorLab {
     //Quiz: 정수 x가 10보다 크고 20보다 작을 때 true를 반환하는 조건식을 논리 연산자 &&를 사용해서 만들어 보세요.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -48,5 +49,30 @@ class OperatorLab {
         } else {
             System.out.printf("%b", x>10 && x<20);
         }
+    }
+}*/
+
+// 자바의 정석 p.160 (ch.04 제어문 시작)
+class OperatorLab {
+    public static void main(String[] args) {
+        int x = 10; // 테스트 값을 -5, 0 등으로 바꿔보세요.
+        char signX = ' ';
+
+        // 조건 연산자를 if-else if-else 문으로 변환함.
+        // 첫 번째 조건(x > 0)이 참인지 확인하고,
+        if (x > 0) {
+            signX = '+';
+        }
+        // 첫 번째 조건이 거짓이면, 두 번째 조건(x == 0)을 확인하며,
+        else if (x == 0) {
+            signX = ' ';
+        }
+        // 앞의 모든 조건이 거짓일 때 마지막 else 블록이 실행됨.
+        else { // x < 0 인 경우
+            signX = '-';
+        }
+
+        int absX = x >= 0 ? x : -x; // 절대값 계산은 별도로 처리
+        System.out.printf("x=%c%d%n", signX, absX);
     }
 }
