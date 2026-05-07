@@ -31,6 +31,15 @@ class MemberCall {
         staticMethod1();
         instanceMethod1();                //인스턴스 메서드에서는 인스턴스 메서드, 클래스 메서드 생성없이 사용 가능
     }
+
+    public static void main(String[] args) {
+        // 1. 클래스 메서드 호출
+        MemberCall.staticMethod1();
+
+        // 2. 인스턴스 메서드 호출을 위한 객체 생성
+        MemberCall mc = new MemberCall();
+        mc.instanceMethod1();
+    }
 }
 
 
