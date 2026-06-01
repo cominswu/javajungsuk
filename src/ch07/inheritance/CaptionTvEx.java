@@ -17,7 +17,7 @@ class CaptionTv extends Tv {
     }
 }
 
-public class CaptionTvEx {
+class CaptionTvEx {
     public static void main(String[] args) {
         CaptionTv ctv = new CaptionTv();
         ctv.channel = 10;
