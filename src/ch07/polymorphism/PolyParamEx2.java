@@ -1,4 +1,4 @@
-package ch07;
+package ch07.polymorphism;
 
 class Product4 {
     int price;			// 제품의 가격
