@@ -18,7 +18,7 @@ class FighterEx {
 
         if (f instanceof Object)
             System.out.println("f는 Object클래스의 자손입니다.");
-    } // main
+    }
 }
 
 class Fighter extends Unit implements Fightable {
